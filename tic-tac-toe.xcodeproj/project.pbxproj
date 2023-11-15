@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E6166CE32B053DA2002C18D2 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6166CE22B053DA2002C18D2 /* Alerts.swift */; };
 		E627E7502B0469C9001E82E0 /* tic_tac_toeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E627E74F2B0469C9001E82E0 /* tic_tac_toeApp.swift */; };
 		E627E7522B0469C9001E82E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E627E7512B0469C9001E82E0 /* ContentView.swift */; };
 		E627E7542B0469CA001E82E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E627E7532B0469CA001E82E0 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E6166CE22B053DA2002C18D2 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		E627E74C2B0469C9001E82E0 /* tic-tac-toe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tic-tac-toe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E627E74F2B0469C9001E82E0 /* tic_tac_toeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tic_tac_toeApp.swift; sourceTree = "<group>"; };
 		E627E7512B0469C9001E82E0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			children = (
 				E627E74F2B0469C9001E82E0 /* tic_tac_toeApp.swift */,
 				E627E7512B0469C9001E82E0 /* ContentView.swift */,
+				E6166CE22B053DA2002C18D2 /* Alerts.swift */,
 				E627E7532B0469CA001E82E0 /* Assets.xcassets */,
 				E627E7552B0469CA001E82E0 /* Preview Content */,
 			);
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E627E7522B0469C9001E82E0 /* ContentView.swift in Sources */,
+				E6166CE32B053DA2002C18D2 /* Alerts.swift in Sources */,
 				E627E7502B0469C9001E82E0 /* tic_tac_toeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
