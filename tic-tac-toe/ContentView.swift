@@ -7,9 +7,13 @@
 
 import SwiftUI
 
-let columns: [GridItem] = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
-
 struct ContentView: View {
+    
+    let columns: [GridItem] = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
+    
+    @State private var moves: [Move?] = Array(repeating: nil, count: 9)
+    @State private var isHumansTurn = true
+    
     var body: some View {
         GeometryReader { geometry in
             VStack {
@@ -25,10 +29,14 @@ struct ContentView: View {
                                 .frame(width: 96)
                                 
                                 
-                            Image(systemName: "xmark")
+                            Image(systemName: moves[i]?.indicator ?? "")
                                 .resizable()
                                 .frame(width: 40, height: 40)
                                 .foregroundColor(.white)
+                        }
+                        .onTapGesture {
+                            moves[i] = Move(player: isHumansTurn ? .human : .computer, boardIndex: i)
+                            isHumansTurn.toggle()
                         }
                     }
                 }
@@ -37,6 +45,19 @@ struct ContentView: View {
             .padding()
             .background(.mint)
         }
+    }
+}
+
+enum Player {
+    case human, computer
+}
+
+struct Move {
+    let player: Player
+    let boardIndex: Int
+    
+    var indicator: String {
+        return player == .human ? "pawprint" : "pawprint.fill"
     }
 }
 
