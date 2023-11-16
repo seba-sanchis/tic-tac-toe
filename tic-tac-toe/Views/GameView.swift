@@ -13,18 +13,18 @@ struct GameView: View {
     
     var body: some View {
         GeometryReader { geometry in
+            ContainerRelativeShape()
+                .fill(Color.mint.gradient)
+                .ignoresSafeArea()
+            
             VStack {
                 Spacer()
-                LazyVGrid(columns: viewModel.columns, spacing: 8) {
+                LazyVGrid(columns: viewModel.columns, spacing: 24) {
                     ForEach(0..<9) { i in
                         ZStack {
                             Circle()
-                                .foregroundColor(.mint)
-                            
-                            Circle()
                                 .stroke(Color.white, lineWidth: 3)
                                 .frame(width: 96)
-                                
                                 
                             Image(systemName: viewModel.moves[i]?.indicator ?? "")
                                 .resizable()
@@ -40,7 +40,6 @@ struct GameView: View {
             }
             .disabled(viewModel.isGameboardDisabled)
             .padding()
-            .background(.mint)
             .alert(item: $viewModel.alertItem, content: { alertItem in
                 Alert(title: alertItem.title,
                       message: alertItem.message,
